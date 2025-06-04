@@ -94,6 +94,7 @@ public class PrestizAFKClient implements ClientModInitializer {
                             lastPrestizRun = 0;
                             ctx.getSource().sendFeedback(ChatLogColor.color(" "));
                             ctx.getSource().sendFeedback(ChatLogColor.color("&aWłączyłeś tryb AFK"));
+                            ctx.getSource().sendFeedback(ChatLogColor.color(" "));
                             return 1;
                         }))
         );

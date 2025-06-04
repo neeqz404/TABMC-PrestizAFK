@@ -23,7 +23,7 @@
   "mixins": [
     "tabmc.mixins.json",
     {
-      "config": "tabmc.client.mixins.json",
+      "config": "neeqz.client.mixins.json",
       "environment": "client"
     }
   ],
