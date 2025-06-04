@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tabmc",
+  "version": "1.0",
+  "name": "TabMC PrestizAFK",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "xyz.neeqz.modded.tabmc.client.PrestizAFKDataGenerator"
+    ],
+    "client": [
+      "xyz.neeqz.modded.tabmc.client.PrestizAFKClient"
+    ],
+    "main": [
+      "neeqz.xyz.modded.tabmc.PrestizAFK"
+    ]
+  },
+  "mixins": [
+    "tabmc.mixins.json",
+    {
+      "config": "tabmc.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.20.4"
+  }
+}
