@@ -77,7 +77,7 @@ public class PrestizAFKClient implements ClientModInitializer {
                             0,
                             SlotActionType.PICKUP,
                             client.player
-                    );
+                    ); // t
 
                     client.player.closeHandledScreen();
                     waitForGuiClick = false;

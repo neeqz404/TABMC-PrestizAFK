@@ -63,7 +63,7 @@ public class UpdateChecker {
                     }
                 } //else {
 //                    sendMessageToClient("&cBłąd podczas sprawdzania wersji (kod HTTP: " + conn.getResponseCode() + ")");
-//                }
+//  //              }
             } catch (Exception e) {
                 sendMessageToClient("&cBłąd podczas sprawdzania aktualizacji: " + e.getMessage());
             }
