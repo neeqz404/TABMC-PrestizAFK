@@ -15,6 +15,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
+import xyz.neeqz.modded.tabmc.client.UpdateStatus.UpdateChecker;
 
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.argument;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
@@ -32,9 +33,10 @@ public class PrestizAFKClient implements ClientModInitializer {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             registerCommands(dispatcher);
         });
-
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null || client.interactionManager == null) return;
+
+            UpdateChecker.checkForUpdate(); // Sprawdzenie wersji co tick (ale w klasie jest limit 30s)
 
             long now = System.currentTimeMillis();
 
@@ -48,6 +50,8 @@ public class PrestizAFKClient implements ClientModInitializer {
                     client.player.sendMessage(ChatLogColor.color(" "), false);
                     client.player.sendMessage(ChatLogColor.color("&7[&6LOG&7] &fWysłano komendę /prestiz"), false);
                 }
+
+
 
                 HitResult target = client.crosshairTarget;
                 if (target != null) {
