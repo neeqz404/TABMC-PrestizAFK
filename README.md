@@ -1,4 +1,4 @@
-#TABMC-PRESTIZAFK INFORMACJE
+# TABMC-PRESTIZAFK INFORMACJE
 
 Stworzony AFK BOT za pomocą ChatGPT
 Jak używac i co robi?
